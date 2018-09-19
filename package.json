@@ -1,0 +1,24 @@
+{
+  "name": "react-links-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "awesome-react-links": "^1.0.0",
+    "emotion": "^9.2.9",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-markdown": "^3.6.0",
+    "react-scripts": "1.1.5",
+    "react-syntax-highlighter": "^8.0.1",
+    "styled-components": "^3.4.9"
+  },
+  "scripts": {
+    "dev": "npm uninstall awesome-react-links && npm link awesome-react-links && npm start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm i awesome-react-links && npm run build",
+    "deploy": "mv build/index.html build/200.html && surge --project ./build/ --domain awesome-react-links.surge.sh",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

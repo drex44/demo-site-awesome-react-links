@@ -1,0 +1,16 @@
+.code-block {
+  max-width: 30em;
+  border: 1px solid rgb(94, 94, 94);
+}
+pre {
+  margin: 0px;
+}
+.one {
+  width: 40%;
+  float: left;
+  text-align: right;
+  padding-right: 10%;
+}
+.two {
+  margin-left: 50%;
+}
