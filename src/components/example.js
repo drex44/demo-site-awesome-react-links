@@ -1,4 +1,3 @@
-/* eslint jsx-a11y/href-no-hash: 0 */
 import React, { Component } from "react";
 import AwesomeLinks, { TwoPartsLinks } from "awesome-react-links";
 import ReactMarkdown from "react-markdown";
@@ -47,11 +46,12 @@ export const ParameterExample = props => {
 
 class Example extends Component {
   render() {
-    let source = `
-\`\`\`html
-<AwesomeLinks linkStyle="${this.props.linkStyle}">
+    let source = `<AwesomeLinks linkStyle="${this.props.linkStyle}">
   <a href="#">Awesome react-links</a>
-</AwesomeLinks>
+</AwesomeLinks>`;
+    let markdownSource = `
+\`\`\`html
+${source}
 \`\`\`
     `;
     return (
@@ -62,8 +62,11 @@ class Example extends Component {
           </AwesomeLinks>
         </div>
         <div className="code-block two">
-          <ReactMarkdown source={source} renderers={{ code: CodeBlock }} />
           <CopyToClipboard>{source}</CopyToClipboard>
+          <ReactMarkdown
+            source={markdownSource}
+            renderers={{ code: CodeBlock }}
+          />
         </div>
       </div>
     );

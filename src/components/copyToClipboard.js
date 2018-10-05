@@ -12,7 +12,6 @@ class CopyToClipboard extends React.Component {
     let textArea = document.createElement("textarea");
     textArea.value = this.props.children;
     document.body.appendChild(textArea);
-    textArea.focus();
     textArea.select();
 
     try {
