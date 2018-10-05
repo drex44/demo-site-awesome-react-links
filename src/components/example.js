@@ -1,7 +1,9 @@
+/* eslint jsx-a11y/href-no-hash: 0 */
 import React, { Component } from "react";
 import AwesomeLinks, { TwoPartsLinks } from "awesome-react-links";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "./renderer";
+import CopyToClipboard from "./copyToClipboard";
 import "./example.css";
 
 export const ParameterExample = props => {
@@ -61,6 +63,7 @@ class Example extends Component {
         </div>
         <div className="code-block two">
           <ReactMarkdown source={source} renderers={{ code: CodeBlock }} />
+          <CopyToClipboard>{source}</CopyToClipboard>
         </div>
       </div>
     );
