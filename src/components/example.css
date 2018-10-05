@@ -1,16 +1,39 @@
 .code-block {
   max-width: 30em;
   border: 1px solid rgb(94, 94, 94);
+  display: flex;
+  background: #f0f0f0;
 }
+
+.code-block-inner {
+  flex: 1;
+}
+
 pre {
   margin: 0px;
 }
+
 .one {
   width: 40%;
   float: left;
   text-align: right;
   padding-right: 10%;
 }
+
 .two {
   margin-left: 50%;
+  overflow-x: auto;
+}
+
+.svg-inline--fa.fa-w-14 {
+  font-size: 17px;
+}
+
+.code-block button {
+  background: #555;
+  border: 0;
+  padding: 8px;
+  border-bottom-left-radius: 3px;
+  cursor: pointer;
+  color: white;
 }

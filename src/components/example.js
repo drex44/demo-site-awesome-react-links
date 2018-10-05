@@ -8,7 +8,7 @@ import "./example.css";
 export const ParameterExample = props => {
   let source = `
   \`\`\`html
-  <AwesomeLinks linkStyle="${props.linkStyle}" 
+  <AwesomeLinks linkStyle="${props.linkStyle}"
     customStyles={{
       linkColor: "black",
       linkHoverColor: "red",
@@ -62,11 +62,13 @@ ${source}
           </AwesomeLinks>
         </div>
         <div className="code-block two">
-          <CopyToClipboard>{source}</CopyToClipboard>
-          <ReactMarkdown
+          <div className="code-block-inner">
+            <ReactMarkdown
             source={markdownSource}
             renderers={{ code: CodeBlock }}
-          />
+            />
+          </div>
+        <CopyToClipboard>{source}</CopyToClipboard>
         </div>
       </div>
     );
@@ -84,7 +86,7 @@ export class TwoPartsExample extends Component {
     `;
     return (
       <div className="example">
-        <div class="one">
+        <div className="one">
           <TwoPartsLinks
             linkStyle={this.props.linkStyle}
             href="#"
@@ -93,7 +95,10 @@ export class TwoPartsExample extends Component {
           />
         </div>
         <div className="code-block two">
-          <ReactMarkdown source={source} renderers={{ code: CodeBlock }} />
+          <div className="code-block-inner">
+            <ReactMarkdown source={source} renderers={{ code: CodeBlock }} />
+          </div>
+          <CopyToClipboard>{source}</CopyToClipboard>
         </div>
       </div>
     );

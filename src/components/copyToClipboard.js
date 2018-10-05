@@ -35,7 +35,9 @@ class CopyToClipboard extends React.Component {
         {/* queryCommandSupported checks that the copy functionality is available */
         document.queryCommandSupported("copy") && (
           <div>
-            <button onClick={this.copy}>Copy</button>
+            <button onClick={this.copy}>
+            <i className="far fa-copy"></i>
+            </button>
             {this.state.success}
           </div>
         )}
