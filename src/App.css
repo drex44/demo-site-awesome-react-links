@@ -9,3 +9,14 @@
 .App-title {
   font-size: 2em;
 }
+
+.text-block {
+  margin: 5em 0em 5em 25em;
+}
+
+@media only screen and (max-width : 720px) {
+  .text-block {
+    margin: 0;
+    text-align: center;
+  }
+}
