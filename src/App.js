@@ -12,7 +12,7 @@ const componentStyles = {
 
 const Information = props => {
   return (
-    <div className={'text-block'}>
+    <div className={"text-block"}>
       <h4>{props.title}</h4>
       <p>{props.desc}</p>
     </div>
@@ -61,41 +61,44 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Awesome React Links</h1>
+          <h4>
+            A collection of animated links/ anchor tags. this can be used on any
+            clickable element.
+          </h4>
         </header>
         <div style={{ padding: "0 15px" }}>
-        <center>
-          <p>
-            To know more about this npm package, checkout the{" "}
-            <a
-              href="https://github.com/drex44/awesome-react-links"
-              target="_new"
-            >
-              Github repo!
-            </a>
-          </p>
-          <p>
-            * Press ctrl + shift + R to clear the caches and get latest version
-            of the site!
-          </p>
-          <p>* Visit the website in computer only</p>
-        </center>
-        <Information
-          title="How to use Parameters?"
-          desc="Pass these parameters to change colors. all of these are optional."
-        />
-        <ParameterExample linkStyle="highlight2" />
-
-        <Information
-          title="All styles"
-          desc="Look at the code sample to see how to use particular style."
-        />
-        <div className="App-body">
-          {links}
-          <center style={{ margin: "2em" }}>
-            <h3>Experimental (do not use in production)</h3>
+          <center>
+            <p>
+              To know more about this npm package, checkout the{" "}
+              <a
+                href="https://github.com/drex44/awesome-react-links"
+                target="_new"
+              >
+                Github repo!
+              </a>
+            </p>
+            <p>
+              * Press ctrl + shift + R to clear the caches and get latest
+              version of the site!
+            </p>
           </center>
-          {twoPartsLinks}
-        </div>
+          <Information
+            title="How to use Parameters?"
+            desc="Pass these parameters to change colors. all of these are optional."
+          />
+          <ParameterExample linkStyle="highlight2" />
+
+          <Information
+            title="All styles"
+            desc="Look at the code sample to see how to use particular style."
+          />
+          <div className="App-body">
+            {links}
+            <center style={{ margin: "2em" }}>
+              <h3>Experimental (do not use in production)</h3>
+            </center>
+            {twoPartsLinks}
+          </div>
         </div>
       </div>
     );
