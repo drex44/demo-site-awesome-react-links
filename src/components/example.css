@@ -37,3 +37,30 @@ pre {
   cursor: pointer;
   color: white;
 }
+
+@media only screen and (max-width : 720px) {
+  .example {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .one {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .two {
+    margin-left: 0;
+    margin-top: 28px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width : 320px) {
+  .one {
+    font-size: 12px;
+  }
+}

@@ -12,7 +12,7 @@ const componentStyles = {
 
 const Information = props => {
   return (
-    <div style={{ margin: "5em 0em 5em 25em" }}>
+    <div className={'text-block'}>
       <h4>{props.title}</h4>
       <p>{props.desc}</p>
     </div>
@@ -62,6 +62,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Awesome React Links</h1>
         </header>
+        <div style={{ padding: "0 15px" }}>
         <center>
           <p>
             To know more about this npm package, checkout the{" "}
@@ -94,6 +95,7 @@ class App extends Component {
             <h3>Experimental (do not use in production)</h3>
           </center>
           {twoPartsLinks}
+        </div>
         </div>
       </div>
     );
