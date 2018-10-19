@@ -4,6 +4,7 @@ import Example, {
   TwoPartsExample,
   ParameterExample
 } from "./components/example";
+import { Installation } from "./components/Installation";
 
 const componentStyles = {
   marginBottom: "2.5em",
@@ -82,6 +83,11 @@ class App extends Component {
               version of the site!
             </p>
           </center>
+          <Information
+            title="Install the package"
+            desc="Use npm or yarn to install the package"
+          />
+          <Installation />
           <Information
             title="How to use Parameters?"
             desc="Pass these parameters to change colors. all of these are optional."
