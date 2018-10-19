@@ -5,6 +5,9 @@ import Example, {
   ParameterExample
 } from "./components/example";
 import { Installation } from "./components/Installation";
+import Contributors from './components/Contributors';
+
+
 
 const componentStyles = {
   marginBottom: "2.5em",
@@ -45,15 +48,15 @@ class App extends Component {
       "highlight10 dashed thick",
       "highlight10 dashed thin"
     ];
-    let links = linkStylesNames.map(linkStyle => (
-      <div style={componentStyles}>
+    let links = linkStylesNames.map((linkStyle, index) => (
+      <div key={index} style={componentStyles}>
         <Example linkStyle={linkStyle} />
       </div>
     ));
 
     var TwoPartsLinkStylesNames = ["highlight1", "highlight2"];
-    let twoPartsLinks = TwoPartsLinkStylesNames.map(linkStyle => (
-      <div style={componentStyles}>
+    let twoPartsLinks = TwoPartsLinkStylesNames.map((linkStyle, index) => (
+      <div key={index} style={componentStyles}>
         <TwoPartsExample linkStyle={linkStyle} />
       </div>
     ));
@@ -106,6 +109,7 @@ class App extends Component {
             {twoPartsLinks}
           </div>
         </div>
+        <Contributors />
       </div>
     );
   }
