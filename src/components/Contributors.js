@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './contributors.css';
 
 class Contributors extends Component {
   state = {
