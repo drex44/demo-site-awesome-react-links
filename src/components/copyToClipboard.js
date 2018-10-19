@@ -1,4 +1,6 @@
 import React from "react";
+import {findDOMNode} from 'react-dom'
+import ReactTooltip from 'react-tooltip'
 
 class CopyToClipboard extends React.Component {
   constructor(props) {
@@ -36,9 +38,15 @@ class CopyToClipboard extends React.Component {
         document.queryCommandSupported("copy") && (
           <div>
             {this.state.success}
-            <button onClick={this.copy}>
+            <p ref='foo' data-tip='copied!'></p>
+            <p ref='foo2' data-tip='copy'></p>
+            <button 
+            onClick={() => { ReactTooltip.show(findDOMNode(this.refs.foo)) }}
+            onMouseEnter={() => {ReactTooltip.show(findDOMNode(this.refs.foo2))}}
+            onMouseLeave={() => {ReactTooltip.hide(findDOMNode(this.refs.foo2))}}>
               <i className="far fa-copy"></i>
             </button>
+            <ReactTooltip />
           </div>
         )}
       </div>
