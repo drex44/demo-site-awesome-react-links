@@ -110,6 +110,7 @@ class App extends Component {
           </div>
         </div>
         <Contributors />
+        <footer>Awesome React Links</footer>
       </div>
     );
   }
