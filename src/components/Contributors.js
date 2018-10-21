@@ -30,7 +30,18 @@ class Contributors extends Component {
           contributors={this.state.contributors}
         />
         <RenderContributors
-          title="Contributors of the original package"
+          title={
+            <span>
+              Contributors of the
+              <a
+                href="https://github.com/drex44/awesome-react-links"
+                target="_new"
+              >
+                {" "}
+                NPM original package
+              </a>
+            </span>
+          }
           contributors={this.state.packageContributors}
         />
       </div>
@@ -53,12 +64,14 @@ const RenderContributors = props => {
           props.contributors.map(({ login, html_url, avatar_url }, index) => {
             return (
               <a href={html_url} key={index} className="contributor">
-                <img
-                  className="contributor__avatar"
-                  src={avatar_url}
-                  alt="contributor"
-                />
-                <p className="contributor__name">{login}</p>
+                <center>
+                  <img
+                    className="contributor__avatar"
+                    src={avatar_url}
+                    alt="contributor"
+                  />
+                  <p className="contributor__name">{login}</p>
+                </center>
               </a>
             );
           })

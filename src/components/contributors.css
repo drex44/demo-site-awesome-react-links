@@ -1,30 +1,27 @@
 /* contributors styles =========================================== */
-.contributors{
+.contributors {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 1rem 0;
 }
 .contributor {
-  display: inline-block;
   text-decoration: none;
-  width: 3rem;
   text-align: center;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   color: #777;
-  transition: .5s;
+  transition: 0.5s;
 }
 .contributor:hover {
   transform: scale(1.2);
 }
-.contributor__avatar{
-  display: inline-block;
+.contributor__avatar {
   width: 100%;
+  width: 3em;
   border-radius: 50%;
 }
 
 .contributor__name {
-  display: inline-block;
-  margin: 0;
+  text-align: center;
 }
 /* =============================================================== */
