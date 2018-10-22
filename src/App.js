@@ -65,10 +65,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="flex">
-            <h1 className="App-title">Awesome React Links</h1>
-            <Stars />
-          </div>
+          <h1 className="App-title">Awesome React Links</h1>
+          <Stars />
           <h4>
             A collection of animated links/ anchor tags. this can be used on any
             clickable element.

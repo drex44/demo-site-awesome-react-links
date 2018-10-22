@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./stars.css";
 
 class Stars extends Component {
   state = {
