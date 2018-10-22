@@ -31,7 +31,7 @@ class Stars extends Component {
 
 const RenderStargazers = props => {
   return (
-    <div className="stars_count">{props.stars}<span title="stars on github">⭐ on GitHub</span></div>
+    <div className="stars_count">{props.stars}<span title="stars on github"><span role="img" aria-label="stars">⭐</span> on GitHub</span></div>
   );
 };
 
