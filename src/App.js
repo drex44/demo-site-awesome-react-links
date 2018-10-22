@@ -6,6 +6,7 @@ import Example, {
 } from "./components/example";
 import { Installation } from "./components/Installation";
 import Contributors from './components/Contributors';
+import Navigation from "./components/Navigation";
 
 
 
@@ -62,55 +63,58 @@ class App extends Component {
     ));
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Awesome React Links</h1>
-          <h4>
-            A collection of animated links/ anchor tags. this can be used on any
-            clickable element.
+      <div className="app">
+        <Navigation />
+        <div className="app-main">
+          <header className="App-header">
+            <h1 className="App-title">Awesome React Links</h1>
+            <h4 className="app-description">
+              A collection of animated links/ anchor tags. this can be used on any
+              clickable element.
           </h4>
-        </header>
-        <div style={{ padding: "0 15px" }}>
-          <center>
-            <p>
-              To know more about this npm package, checkout the{" "}
-              <a
-                href="https://github.com/drex44/awesome-react-links"
-                target="_new"
-              >
-                Github repo!
+          </header>
+          <div style={{ padding: "0 15px" }}>
+            <center>
+              <p>
+                To know more about this npm package, checkout the{" "}
+                <a
+                  href="https://github.com/drex44/awesome-react-links"
+                  target="_new"
+                >
+                  Github repo!
               </a>
+              </p>
+              <p>
+                * Press ctrl + shift + R to clear the caches and get latest
+                version of the site!
             </p>
-            <p>
-              * Press ctrl + shift + R to clear the caches and get latest
-              version of the site!
-            </p>
-          </center>
-          <Information
-            title="Install the package"
-            desc="Use npm or yarn to install the package"
-          />
-          <Installation />
-          <Information
-            title="How to use Parameters?"
-            desc="Pass these parameters to change colors. all of these are optional."
-          />
-          <ParameterExample linkStyle="highlight2" />
-
-          <Information
-            title="All styles"
-            desc="Look at the code sample to see how to use particular style."
-          />
-          <div className="App-body">
-            {links}
-            <center style={{ margin: "2em" }}>
-              <h3>Experimental (do not use in production)</h3>
             </center>
-            {twoPartsLinks}
+            <Information
+              title="Install the package"
+              desc="Use npm or yarn to install the package"
+            />
+            <Installation />
+            <Information
+              title="How to use Parameters?"
+              desc="Pass these parameters to change colors. all of these are optional."
+            />
+            <ParameterExample linkStyle="highlight2" />
+
+            <Information
+              title="All styles"
+              desc="Look at the code sample to see how to use particular style."
+            />
+            <div className="App-body styles">
+              {links}
+              <center style={{ margin: "2em" }}>
+                <h3>Experimental (do not use in production)</h3>
+              </center>
+              {twoPartsLinks}
+            </div>
           </div>
+          <Contributors />
         </div>
-        <Contributors />
-        <footer>Awesome React Links</footer>
+        {/* <footer>Awesome React Links</footer> */}
       </div>
     );
   }
