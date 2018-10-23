@@ -22,7 +22,7 @@ export const ParameterExample = props => {
   \`\`\`
       `;
   return (
-    <div className="example">
+    <div className="example usage">
       <div className="one">
         <AwesomeLinks
           linkStyle={props.linkStyle}
@@ -55,7 +55,7 @@ ${source}
 \`\`\`
     `;
     return (
-      <div className="example">
+      <div className="example one-part">
         <div className="one">
           <AwesomeLinks linkStyle={this.props.linkStyle}>
             <a href="#">Awesome React Links</a>
@@ -64,11 +64,11 @@ ${source}
         <div className="code-block two">
           <div className="code-block-inner">
             <ReactMarkdown
-            source={markdownSource}
-            renderers={{ code: CodeBlock }}
+              source={markdownSource}
+              renderers={{ code: CodeBlock }}
             />
           </div>
-        <CopyToClipboard>{source}</CopyToClipboard>
+          <CopyToClipboard>{source}</CopyToClipboard>
         </div>
       </div>
     );
@@ -81,11 +81,11 @@ export class TwoPartsExample extends Component {
 \`\`\`html
 <TwoPartsLinks linkStyle="${
       this.props.linkStyle
-    }" href="#" firstPart="Awesome" secondPart="react-links" />
+      }" href="#" firstPart="Awesome" secondPart="react-links" />
 \`\`\`
     `;
     return (
-      <div className="example">
+      <div className="example two-part">
         <div className="one">
           <TwoPartsLinks
             linkStyle={this.props.linkStyle}

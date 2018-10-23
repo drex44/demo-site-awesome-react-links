@@ -1,0 +1,39 @@
+.nav{
+  padding: 1rem;
+  color: white;
+  background-color: rgba(0,0,0,.87);
+}
+
+.nav__main--link, .nav__secondary--link{
+  color: rgba(255,255,255,.5);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.nav__main--link:hover, .nav__secondary--link:hover {
+  color: rgba(255,255,255, 1);
+}
+
+.nav__secondary{
+  animation: slideDown .5s ease-in-out forwards;
+}
+.nav__secondary--link{
+  font-size: .8rem;
+  margin-left: 1.5rem;
+}
+
+
+
+
+/* ============================ */
+@keyframes slideDown{
+  0%{
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================ */

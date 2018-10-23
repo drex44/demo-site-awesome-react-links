@@ -1,13 +1,16 @@
 .App-header {
   text-align: center;
-  background-color: #222;
-  padding: 3em;
-  color: white;
+  padding: 8rem 3em;
+  border-bottom: 2px solid #eee;
   margin-bottom: 2em;
 }
 
 .App-title {
   font-size: 2em;
+}
+
+.app-description{
+  color: rgba(0,0,0,.6);
 }
 
 .text-block {
@@ -28,6 +31,16 @@ footer{
   }
 }
 
+/* Advanced UI styles======================================= */
+.app{
+  display: flex;
+}
+
+.app-main{
+  flex: 70%;
+  overflow: auto;
+  height: 100vh;
+}
 .flex {
   display: flex;
   align-items: center;
