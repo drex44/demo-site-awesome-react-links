@@ -1,37 +1,19 @@
 import React, { Component } from "react";
 
-class Stars extends Component {
-  state = {
-    stargazers: [],
-    teste: []
-  };
-
-  componentWillMount() {
-    fetch(
-      "https://api.github.com/repos/drex44/awesome-react-links/stargazers"
-    )
-      .then(response => response.json())
-      .then(packageStargazers =>
-        this.setState({ packageStargazers: packageStargazers.length })
-      );
-  }
-
-  render() {
-    return (
-      <div>
-        <RenderStargazers
-          title="Stars of this package"
-          stars={this.state.packageStargazers}
-        />
-      </div>
-    );
-  }
-}
-
 const RenderStargazers = props => {
   return (
-    <div className="stars_count">{props.stars}<span title="stars on github">⭐ on GitHub</span></div>
+    <div>
+      <a
+        class="github-button"
+        href={props.repoLink}
+        data-size="large"
+        data-show-count="true"
+        aria-label="Star drex44/awesome-react-links on GitHub"
+      >
+        Star
+      </a>
+    </div>
   );
 };
 
-export default Stars;
+export default RenderStargazers;

@@ -5,12 +5,9 @@ import Example, {
   ParameterExample
 } from "./components/example";
 import { Installation } from "./components/Installation";
-import Contributors from './components/Contributors';
+import Contributors from "./components/Contributors";
 import Navigation from "./components/Navigation";
-import Stars from './components/Stars';
-
-
-
+import GitHubStars from "./components/Stars";
 
 const componentStyles = {
   marginBottom: "2.5em",
@@ -65,17 +62,16 @@ class App extends Component {
     ));
 
     return (
-
       <div className="app">
         <Navigation />
         <div className="app-main">
           <header className="App-header">
             <h1 className="App-title">Awesome React Links</h1>
-      <Stars />
+            <GitHubStars repoLink="https://github.com/drex44/awesome-react-links" />
             <h4 className="app-description">
-              A collection of animated links/ anchor tags. this can be used on any
-              clickable element.
-          </h4>
+              A collection of animated links/ anchor tags. this can be used on
+              any clickable element.
+            </h4>
           </header>
           <div style={{ padding: "0 15px" }}>
             <center>
@@ -86,34 +82,46 @@ class App extends Component {
                   target="_new"
                 >
                   Github repo!
-              </a>
+                </a>
               </p>
               <p>
                 * Press ctrl + shift + R to clear the caches and get latest
                 version of the site!
-            </p>
+              </p>
             </center>
-            <Information
-              title="Install the package"
-              desc="Use npm or yarn to install the package"
-            />
-            <Installation />
-            <Information
-              title="How to use Parameters?"
-              desc="Pass these parameters to change colors. all of these are optional."
-            />
-            <ParameterExample linkStyle="highlight2" />
+            <div className="installation">
+              <Information
+                title="Install the package"
+                desc="Use npm or yarn to install the package"
+              />
+              <Installation />
+            </div>
+            <div className="usage">
+              <Information
+                title="How to use Parameters?"
+                desc="Pass these parameters to change colors. all of these are optional."
+              />
+              <ParameterExample linkStyle="highlight2" />
+            </div>
 
-            <Information
-              title="All styles"
-              desc="Look at the code sample to see how to use particular style."
-            />
-            <div className="App-body styles">
-              {links}
-              <center style={{ margin: "2em" }}>
-                <h3>Experimental (do not use in production)</h3>
-              </center>
-              {twoPartsLinks}
+            <div className="styles">
+              <Information
+                title="All styles"
+                desc="Look at the code sample to see how to use particular style."
+              />
+              <div className="App-body">
+                <div className="production-ready">
+                  <Information
+                    title="Production ready styles"
+                    desc="Look at the code sample to see how to use particular style."
+                  />
+                  {links}
+                </div>
+                <center style={{ margin: "2em" }} className="experimental">
+                  <h3>Experimental (do not use in production)</h3>
+                </center>
+                {twoPartsLinks}
+              </div>
             </div>
           </div>
           <Contributors />

@@ -15,7 +15,7 @@ export const Installation = props => {
 `;
 
   return (
-    <div className="example installation">
+    <div className="example">
       <div className="code-block two">
         <div className="code-block-inner">
           <ReactMarkdown

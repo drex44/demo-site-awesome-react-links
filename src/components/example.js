@@ -22,7 +22,7 @@ export const ParameterExample = props => {
   \`\`\`
       `;
   return (
-    <div className="example usage">
+    <div className="example">
       <div className="one">
         <AwesomeLinks
           linkStyle={props.linkStyle}
@@ -81,7 +81,7 @@ export class TwoPartsExample extends Component {
 \`\`\`html
 <TwoPartsLinks linkStyle="${
       this.props.linkStyle
-      }" href="#" firstPart="Awesome" secondPart="react-links" />
+    }" href="#" firstPart="Awesome" secondPart="react-links" />
 \`\`\`
     `;
     return (
