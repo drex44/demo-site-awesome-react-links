@@ -6,6 +6,7 @@ import Example, {
 } from "./components/example";
 import { Installation } from "./components/Installation";
 import Contributors from './components/Contributors';
+import Stars from './components/Stars';
 
 
 
@@ -65,6 +66,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Awesome React Links</h1>
+          <Stars />
           <h4>
             A collection of animated links/ anchor tags. this can be used on any
             clickable element.
