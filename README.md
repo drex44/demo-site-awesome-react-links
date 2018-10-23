@@ -2,7 +2,8 @@
 
 demo site of the npm package [awesome-react-links](https://github.com/drex44/awesome-react-links).
 
-The site is available on [netlify](https://awesome-react-links.netlify.com).
+The master branch is automatically deployed LIVE on [netlify](https://awesome-react-links.netlify.com).
+so all PRs merged will be almost instanly deployed!
 
 ### Steps to setup the site locally,
 
