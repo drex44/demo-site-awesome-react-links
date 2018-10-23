@@ -2,7 +2,7 @@
 
 demo site of the npm package [awesome-react-links](https://github.com/drex44/awesome-react-links).
 
-The site is available on [here](https://awesome-react-links.surge.sh).
+The site is available on [netlify](https://awesome-react-links.netlify.com).
 
 ### Steps to setup the site locally,
 
