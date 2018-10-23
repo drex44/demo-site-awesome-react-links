@@ -41,7 +41,8 @@ footer{
   overflow: auto;
   height: 100vh;
 }
-
-/* ======================================= */
-
-
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
