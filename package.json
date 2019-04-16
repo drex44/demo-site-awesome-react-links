@@ -4,14 +4,14 @@
   "private": true,
   "dependencies": {
     "awesome-react-links": "^1.0.0",
-    "emotion": "^9.2.9",
+    "emotion": "^10.0.9",
     "node-fetch": "^2.2.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-markdown": "^3.6.0",
-    "react-scripts": "1.1.5",
-    "react-syntax-highlighter": "^8.0.1",
-    "styled-components": "^3.4.9"
+    "react-markdown": "^4.0.8",
+    "react-scripts": "2.1.8",
+    "react-syntax-highlighter": "^10.2.1",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "dev": "npm uninstall awesome-react-links && npm link awesome-react-links && npm start",
